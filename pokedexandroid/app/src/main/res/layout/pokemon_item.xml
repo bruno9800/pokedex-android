@@ -74,6 +74,7 @@
                 android:layout_marginEnd="5dp"
 
                 android:layout_marginRight="5dp"
+                android:layout_marginBottom="8dp"
                 android:background="#fd7d24"
                 android:gravity="center_horizontal"
                 android:textColor="#FFFFFF"
@@ -85,13 +86,14 @@
                 android:id="@+id/tvType2"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:background="#fd7d24"
                 android:gravity="center_horizontal"
                 android:textColor="#FFFFFF"
+
                 android:textSize="12sp"
 
                 app:layout_constraintHorizontal_bias="0.7"
-
                 tools:text="Fire" />
         </LinearLayout>
 
