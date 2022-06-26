@@ -1,86 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/ivPokemon"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:contentDescription="Pokemon image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#919191"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPokemon"
-        tools:text="Nº 001" />
-
-    <TextView
-        android:id="@+id/tvPokemon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#424242"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNumber"
-        tools:text="Charmander" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPokemon"
-        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:id="@+id/ivPokemon"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/charmander"
+            android:contentDescription="Pokemon image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvType1"
-            android:layout_width="130dp"
+            android:id="@+id/tvNumber"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#919191"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.21"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPokemon"
+            tools:text="Nº 001" />
 
-            android:layout_marginEnd="5dp"
-
-            android:layout_marginRight="5dp"
-            android:background="#fd7d24"
-            android:gravity="center_horizontal"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            app:layout_constraintHorizontal_bias="0.25"
-            tools:text="Fire" />
         <TextView
-            android:id="@+id/tvType2"
-            android:layout_width="130dp"
+            android:id="@+id/tvPokemon"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#fd7d24"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            android:gravity="center_horizontal"
+            android:textColor="#424242"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNumber"
+            tools:text="Charmander" />
 
-            app:layout_constraintHorizontal_bias="0.7"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPokemon">
 
-            tools:text="Fire" />
-    </LinearLayout>
-        
-    
+            <TextView
+                android:id="@+id/tvType1"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="5dp"
+
+                android:layout_marginRight="5dp"
+                android:background="#fd7d24"
+                android:gravity="center_horizontal"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_bias="0.25"
+                tools:text="Fire" />
+
+            <TextView
+                android:id="@+id/tvType2"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:background="#fd7d24"
+                android:gravity="center_horizontal"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+
+                app:layout_constraintHorizontal_bias="0.7"
+
+                tools:text="Fire" />
+        </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
