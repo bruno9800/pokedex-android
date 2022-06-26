@@ -43,10 +43,10 @@ class PokemonAdapter(
             tvPokemon.text = item.name
             tvType1.text = item.types[0].name
 
-            if(item.types.size > 1){
+            if (item.types.size > 1) {
                 tvType2.visibility = View.VISIBLE
                 tvType2.text = item.types[1].name
-            }else{
+            } else {
                 tvType2.visibility = View.GONE
             }
 

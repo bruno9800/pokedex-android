@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.brunomatheus.pokedex_android.R
+import br.com.brunomatheus.pokedex_android.api.PokemonRepositore
 import br.com.brunomatheus.pokedex_android.domain.Pokemon
 import br.com.brunomatheus.pokedex_android.domain.PokemonType
 
@@ -25,10 +26,11 @@ class MainActivity : AppCompatActivity() {
         )
 
 
-
         val pokemons = listOf(
             charmander, charmander
         )
+
+        val pokemonsApi = PokemonRepositore.listPokemons()
 
         val layoutManeger = LinearLayoutManager(this)
 
